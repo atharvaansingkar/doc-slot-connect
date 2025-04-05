@@ -8,7 +8,6 @@ import { AppointmentProvider } from "./context/AppointmentContext";
 import Index from "./pages/Index";
 import DoctorDashboard from "./pages/DoctorDashboard";
 import UserDashboard from "./pages/UserDashboard";
-import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,7 +21,6 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/auth" element={<Auth />} />
             <Route path="/doctor" element={<DoctorDashboard />} />
             <Route path="/user" element={<UserDashboard />} />
             <Route path="*" element={<NotFound />} />
