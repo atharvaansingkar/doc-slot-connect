@@ -32,6 +32,7 @@ const SlotCreator = () => {
       startTime,
       endTime,
       isOnline,
+      isBooked: false // Add the missing isBooked property
     });
 
     // Reset form for next slot creation
