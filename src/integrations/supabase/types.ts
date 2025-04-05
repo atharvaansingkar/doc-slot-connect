@@ -147,7 +147,7 @@ export type Database = {
         }
         Insert: {
           degree?: string | null
-          doctor_id?: string
+          doctor_id: string
           is_active?: boolean | null
           license_number?: string | null
           name: string
@@ -197,7 +197,7 @@ export type Database = {
           gender?: string | null
           last_name?: string | null
           medical_history?: string | null
-          patient_id?: string
+          patient_id: string
           phone_number?: string | null
           severe_allergies?: string | null
           smoking_habits?: string | null

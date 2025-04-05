@@ -3,27 +3,14 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useAppointment } from '@/context/AppointmentContext';
 import { UserIcon, UserCog } from 'lucide-react';
 
 const UserTypeSelection = () => {
   const navigate = useNavigate();
-  const { setCurrentUser } = useAppointment();
 
   const handleUserTypeSelect = (type: 'doctor' | 'patient') => {
-    // In a real app, you'd handle authentication here
-    // For demo purposes, we're just setting a mock user
-    const mockUser = {
-      id: Math.random().toString(36).substring(2, 9),
-      name: type === 'doctor' ? 'Dr. Jane Smith' : 'John Doe',
-      email: type === 'doctor' ? 'doctor@example.com' : 'patient@example.com',
-      type
-    };
-    
-    setCurrentUser(mockUser);
-    
-    // Redirect to appropriate dashboard
-    navigate(type === 'doctor' ? '/doctor' : '/user');
+    // Navigate to the auth page
+    navigate('/auth');
   };
 
   return (
